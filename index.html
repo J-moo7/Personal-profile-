@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeet Makwana | Workflow Architect & Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Space Grotesk', sans-serif; scroll-behavior: smooth; background-color: #020617; color: #f8fafc; }
+        .glass { background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .neon-text { text-shadow: 0 0 10px rgba(99, 102, 241, 0.5); }
+        .n8n-gradient { background: linear-gradient(135deg, #ff6c37 0%, #ff4b2b 100%); }
+        .accent-gradient { background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .blob { position: absolute; width: 300px; height: 300px; background: #4f46e5; filter: blur(100px); opacity: 0.15; z-index: -1; }
+    </style>
+</head>
+<body class="selection:bg-indigo-500 selection:text-white">
+
+    <div class="fixed bottom-6 right-6 z-[100] glass p-3 rounded-full flex items-center gap-3 shadow-2xl">
+        <button onclick="toggleAudio()" id="audioBtn" class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center hover:bg-indigo-500 transition">
+            <i class="fa-solid fa-play" id="audioIcon"></i>
+        </button>
+        <span class="text-xs font-bold pr-2 uppercase tracking-widest hidden md:block">Background Music</span>
+        <audio id="bgAudio" loop>
+            <source src="background-music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <nav class="fixed w-full z-50 p-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center glass py-4 px-8 rounded-2xl">
+            <div class="text-2xl font-bold tracking-tighter">JEET<span class="text-indigo-500">.</span></div>
+            <div class="hidden md:flex space-x-10 text-sm font-medium uppercase tracking-widest">
+                <a href="#home" class="hover:text-indigo-400 transition">Home</a>
+                <a href="#about" class="hover:text-indigo-400 transition">About</a>
+                <a href="#n8n" class="hover:text-indigo-400 transition text-orange-400">Automation</a>
+                <a href="#projects" class="hover:text-indigo-400 transition">Work</a>
+                <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative min-h-screen flex items-center pt-20 px-6">
+        <div class="blob top-20 left-20"></div>
+        <div class="blob bottom-20 right-20 bg-purple-600"></div>
+        
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center w-full">
+            <div>
+                <h2 class="text-indigo-500 font-bold tracking-[0.3em] uppercase mb-4">Freelance Developer</h2>
+                <h1 class="text-6xl md:text-8xl font-bold leading-none mb-6">
+                    Building <span class="accent-gradient">Future</span> Systems.
+                </h1>
+                <p class="text-slate-400 text-lg leading-relaxed mb-10 max-w-lg">
+                    I specialize in high-performance web applications and enterprise-grade **n8n automation** that scales your business operations.
+                </p>
+                <div class="flex gap-6">
+                    <a href="#contact" class="bg-white text-black px-10 py-4 rounded-xl font-bold hover:bg-indigo-500 hover:text-white transition-all duration-300">Hire Me</a>
+                    <a href="#projects" class="glass px-10 py-4 rounded-xl font-bold hover:bg-white/10 transition">View Projects</a>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <img src="profile.jpg" alt="Jeet Makwana" class="relative rounded-3xl w-full grayscale hover:grayscale-0 transition duration-500 shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <section id="n8n" class="py-32 px-6 bg-slate-950/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-12 glass p-10 md:p-16 rounded-[3rem]">
+                <div class="flex-1">
+                    <div class="n8n-gradient w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-orange-500/20">
+                        <i class="fa-solid fa-diagram-project text-3xl"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold mb-6">Advanced <span class="text-orange-500">n8n</span> Workflow Architect</h2>
+                    <p class="text-slate-400 leading-relaxed mb-8">
+                        I don't just connect apps; I build intelligent ecosystems. From complex API orchestrations to error-resilient business logic, I transform manual chaos into automated precision.
+                    </p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <li class="flex items-center gap-3 text-sm font-semibold"><i class="fa-solid fa-check-circle text-orange-500"></i> Custom API Integrations</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold"><i class="fa-solid fa-check-circle text-orange-500"></i> Advanced Webhook Handling</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold"><i class="fa-solid fa-check-circle text-orange-500"></i> Error Management & Logging</li>
+                        <li class="flex items-center gap-3 text-sm font-semibold"><i class="fa-solid fa-check-circle text-orange-500"></i> Data Transformation (JS/Node)</li>
+                    </ul>
+                </div>
+                <div class="flex-1 grid grid-cols-2 gap-4">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 text-center">
+                        <p class="text-3xl font-bold text-orange-500 mb-1">50+</p>
+                        <p class="text-xs uppercase tracking-widest text-slate-500">Nodes Mastered</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 text-center">
+                        <p class="text-3xl font-bold text-orange-500 mb-1">80%</p>
+                        <p class="text-xs uppercase tracking-widest text-slate-500">Efficiency Boost</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
+            <div>
+                <h3 class="text-3xl font-bold mb-10">Technical <span class="text-indigo-500">Stack</span></h3>
+                <div class="flex flex-wrap gap-4">
+                    <span class="glass px-6 py-3 rounded-xl text-sm font-bold border-indigo-500/30">Flutter</span>
+                    <span class="glass px-6 py-3 rounded-xl text-sm font-bold border-indigo-500/30">Android</span>
+                    <span class="glass px-6 py-3 rounded-xl text-sm font-bold border-indigo-500/30">Node.js</span>
+                    <span class="glass px-6 py-3 rounded-xl text-sm font-bold border-indigo-500/30">MongoDB</span>
+                    <span class="glass px-6 py-3 rounded-xl text-sm font-bold border-indigo-500/30">AWS Cloud</span>
+                    <span class="glass px-6 py-3 rounded-xl text-sm font-bold border-indigo-500/30">React/JS</span>
+                    <span class="glass px-6 py-3 rounded-xl text-sm font-bold border-indigo-500/30">Dart</span>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-3xl font-bold mb-10">Work Experience</h3>
+                <div class="space-y-8">
+                    <div class="relative pl-8 border-l border-indigo-500/30">
+                        <div class="absolute w-3 h-3 bg-indigo-500 rounded-full -left-[6px] top-2 shadow-[0_0_10px_#6366f1]"></div>
+                        <h4 class="font-bold text-lg">Freelance Web & App Developer</h4>
+                        <p class="text-xs text-slate-500 mb-2">2023 - Present | Rajkot, India</p>
+                        <p class="text-sm text-slate-400">Delivering high-end web solutions using modern frameworks and ensuring seamless database operations across AWS and SQL environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 px-6 bg-slate-900/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-between items-end mb-16">
+                <h2 class="text-4xl font-bold leading-tight">Featured<br><span class="accent-gradient">Projects</span></h2>
+                <p class="text-slate-500 text-sm max-w-[200px]">A selection of my recent technical achievements.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="group glass p-8 rounded-[2rem] hover:bg-white/5 transition duration-500">
+                    <div class="mb-6 flex justify-between items-start">
+                        <i class="fa-solid fa-droplet text-4xl text-indigo-500"></i>
+                        <span class="text-[10px] font-black uppercase tracking-widest glass px-3 py-1 rounded-full">Web Application</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">BDMS - Blood Management</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">A mission-critical management system for blood donation operations with real-time tracking.</p>
+                    <div class="flex gap-3 text-[10px] font-bold text-indigo-300 uppercase">
+                        <span>PHP</span> <span>SQL</span> <span>JS</span>
+                    </div>
+                </div>
+                <div class="group glass p-8 rounded-[2rem] hover:bg-white/5 transition duration-500">
+                    <div class="mb-6 flex justify-between items-start">
+                        <i class="fa-solid fa-boxes-stacked text-4xl text-purple-500"></i>
+                        <span class="text-[10px] font-black uppercase tracking-widest glass px-3 py-1 rounded-full">Mobile App</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">MMAS - Material Accounting</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Advanced Flutter-based application for material management and financial accounting.</p>
+                    <div class="flex gap-3 text-[10px] font-bold text-purple-300 uppercase">
+                        <span>Flutter</span> <span>Dart</span> <span>Firebase</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-bold mb-8">Ready to <span class="accent-gradient">Automate?</span></h2>
+            <p class="text-slate-400 mb-12 text-lg">Let’s discuss your project and how we can optimize your workflows.</p>
+            <div class="grid md:grid-cols-3 gap-6 mb-16">
+                <div class="glass p-8 rounded-2xl">
+                    <i class="fa-solid fa-envelope mb-4 text-indigo-500 text-xl"></i>
+                    <p class="text-xs font-bold text-slate-500 uppercase mb-1">Email</p>
+                    <p class="text-sm font-bold">jeetmakvana2003@gmail.com</p>
+                </div>
+                <div class="glass p-8 rounded-2xl">
+                    <i class="fa-solid fa-phone mb-4 text-indigo-500 text-xl"></i>
+                    <p class="text-xs font-bold text-slate-500 uppercase mb-1">Phone</p>
+                    <p class="text-sm font-bold">+91 8469019009</p>
+                </div>
+                <div class="glass p-8 rounded-2xl">
+                    <i class="fa-solid fa-location-dot mb-4 text-indigo-500 text-xl"></i>
+                    <p class="text-xs font-bold text-slate-500 uppercase mb-1">Location</p>
+                    <p class="text-sm font-bold">Rajkot, India</p>
+                </div>
+            </div>
+            <a href="mailto:jeetmakvana2003@gmail.com" class="n8n-gradient text-white px-12 py-5 rounded-2xl font-bold shadow-xl shadow-orange-500/20 hover:scale-105 transition transform">Send a Message</a>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-slate-500 text-xs font-bold uppercase tracking-[0.4em]">© 2026 Jeet Makwana — Digital Solutions</p>
+    </footer>
+
+    <script>
+        const audio = document.getElementById('bgAudio');
+        const icon = document.getElementById('audioIcon');
+        
+        function toggleAudio() {
+            if (audio.paused) {
+                audio.play();
+                icon.classList.replace('fa-play', 'fa-pause');
+            } else {
+                audio.pause();
+                icon.classList.replace('fa-pause', 'fa-play');
+            }
+        }
+    </script>
+</body>
+</html>
+
