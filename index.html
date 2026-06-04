@@ -18,6 +18,7 @@
 </head>
 <body class="selection:bg-indigo-500 selection:text-white">
 
+    <!-- Audio Player (Floating) -->
     <div class="fixed bottom-6 right-6 z-[100] glass p-3 rounded-full flex items-center gap-3 shadow-2xl">
         <button onclick="toggleAudio()" id="audioBtn" class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center hover:bg-indigo-500 transition">
             <i class="fa-solid fa-play" id="audioIcon"></i>
@@ -28,6 +29,7 @@
         </audio>
     </div>
 
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 p-6">
         <div class="max-w-6xl mx-auto flex justify-between items-center glass py-4 px-8 rounded-2xl">
             <div class="text-2xl font-bold tracking-tighter">JEET<span class="text-indigo-500"> M.</span></div>
@@ -41,6 +43,7 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center pt-20 px-6">
         <div class="blob top-20 left-20"></div>
         <div class="blob bottom-20 right-20 bg-purple-600"></div>
@@ -66,6 +69,7 @@
         </div>
     </section>
 
+    <!-- n8n Specialist Section -->
     <section id="n8n" class="py-32 px-6 bg-slate-950/50">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row items-center gap-12 glass p-10 md:p-16 rounded-[3rem]">
@@ -98,6 +102,7 @@
         </div>
     </section>
 
+    <!-- Experience & Skills -->
     <section id="about" class="py-32 px-6">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
             <div>
@@ -126,13 +131,69 @@
         </div>
     </section>
 
+    <!-- Projects (Dark Grid - Updated with n8n Projects) -->
     <section id="projects" class="py-32 px-6 bg-slate-900/30">
         <div class="max-w-6xl mx-auto">
             <div class="flex justify-between items-end mb-16">
                 <h2 class="text-4xl font-bold leading-tight">Featured<br><span class="accent-gradient">Projects</span></h2>
-                <p class="text-slate-500 text-sm max-w-[200px]">A selection of my recent technical achievements.</p>
+                <p class="text-slate-500 text-sm max-w-[200px]">A selection of my recent technical and automation achievements.</p>
             </div>
+            
             <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Project 1: Smart Warehouse -->
+                <div class="group glass p-8 rounded-[2rem] hover:bg-white/5 transition duration-500">
+                    <div class="mb-6 flex justify-between items-start">
+                        <i class="fa-solid fa-boxes-stacked text-4xl text-orange-500"></i>
+                        <span class="text-[10px] font-black uppercase tracking-widest glass px-3 py-1 rounded-full text-orange-400">Automation</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Smart Warehouse & Inventory Alert System</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Real-time stock monitoring and automated low-stock alerts sent directly to managers via WhatsApp.</p>
+                    <div class="flex gap-3 text-[10px] font-bold text-orange-300 uppercase">
+                        <span>n8n</span> <span>MongoDB</span> <span>WhatsApp API</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: Expense & Tax Tracker -->
+                <div class="group glass p-8 rounded-[2rem] hover:bg-white/5 transition duration-500">
+                    <div class="mb-6 flex justify-between items-start">
+                        <i class="fa-solid fa-file-invoice-dollar text-4xl text-orange-500"></i>
+                        <span class="text-[10px] font-black uppercase tracking-widest glass px-3 py-1 rounded-full text-orange-400">Automation</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Automated Expense & Tax Prep Tracker</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Workflow that listens for incoming emails with receipts, parses the data, and logs it directly into Google Sheets.</p>
+                    <div class="flex gap-3 text-[10px] font-bold text-orange-300 uppercase">
+                        <span>n8n</span> <span>Gmail API</span> <span>Google Sheets</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Task Dispatch Bot -->
+                <div class="group glass p-8 rounded-[2rem] hover:bg-white/5 transition duration-500">
+                    <div class="mb-6 flex justify-between items-start">
+                        <i class="fa-solid fa-helmet-safety text-4xl text-orange-500"></i>
+                        <span class="text-[10px] font-black uppercase tracking-widest glass px-3 py-1 rounded-full text-orange-400">Automation</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Field Work & Task Dispatch Bot</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Scheduled workflow that reads daily tasks from a database and sends personalized assignments to field workers.</p>
+                    <div class="flex gap-3 text-[10px] font-bold text-orange-300 uppercase">
+                        <span>n8n</span> <span>Cron</span> <span>SQL</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Client Onboarding -->
+                <div class="group glass p-8 rounded-[2rem] hover:bg-white/5 transition duration-500">
+                    <div class="mb-6 flex justify-between items-start">
+                        <i class="fa-solid fa-handshake text-4xl text-orange-500"></i>
+                        <span class="text-[10px] font-black uppercase tracking-widest glass px-3 py-1 rounded-full text-orange-400">Automation</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Cross-Platform Client Onboarding</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Seamless onboarding pipeline that creates Drive folders, updates CRM, and sends welcome emails automatically.</p>
+                    <div class="flex gap-3 text-[10px] font-bold text-orange-300 uppercase">
+                        <span>n8n</span> <span>Drive API</span> <span>CRM</span>
+                    </div>
+                </div>
+
+                <!-- Project 5: BDMS (Original) -->
                 <div class="group glass p-8 rounded-[2rem] hover:bg-white/5 transition duration-500">
                     <div class="mb-6 flex justify-between items-start">
                         <i class="fa-solid fa-droplet text-4xl text-indigo-500"></i>
@@ -144,9 +205,11 @@
                         <span>PHP</span> <span>SQL</span> <span>JS</span>
                     </div>
                 </div>
+
+                <!-- Project 6: MMAS (Original) -->
                 <div class="group glass p-8 rounded-[2rem] hover:bg-white/5 transition duration-500">
                     <div class="mb-6 flex justify-between items-start">
-                        <i class="fa-solid fa-boxes-stacked text-4xl text-purple-500"></i>
+                        <i class="fa-solid fa-mobile-screen text-4xl text-purple-500"></i>
                         <span class="text-[10px] font-black uppercase tracking-widest glass px-3 py-1 rounded-full">Mobile App</span>
                     </div>
                     <h3 class="text-2xl font-bold mb-3">MMAS - Material Accounting</h3>
@@ -155,10 +218,12 @@
                         <span>Flutter</span> <span>Dart</span> <span>Firebase</span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="py-32 px-6">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-5xl font-bold mb-8">Ready to <span class="accent-gradient">Automate?</span></h2>
@@ -204,4 +269,3 @@
     </script>
 </body>
 </html>
-
